@@ -19,5 +19,7 @@ You can install latest versions of Puppet using Puppet Labs package repository o
 
 Finally you should be able just to run:
 
-	# yum install puppet
+	# wget -O /tmp/init.pp https://raw.githubusercontent.com/unicore-life/puppet-manifests/master/initialization.pp
+	# puppet apply /tmp/init.pp 
+
 

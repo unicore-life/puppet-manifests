@@ -5,6 +5,9 @@ Exec {
     path => [ '/bin/', '/usr/bin/' ] 
 }
 
+$manifestsDirectory = '/opt/unicore/puppet-manifests'
+$manifestsRepositoryUrl = 'https://github.com/unicore-life/puppet-manifests.git'
+
 package { 'puppetlabs-release':
   provider        => rpm,
   ensure          => installed,
