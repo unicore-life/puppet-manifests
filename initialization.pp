@@ -1,5 +1,4 @@
 $rhelVersion = '6'
-$epelVersion = '6-8'
 
 Exec { 
     path => [ '/bin/', '/usr/bin/' ] 
@@ -12,18 +11,11 @@ package { 'puppetlabs-release':
   source          => "http://yum.puppetlabs.com/puppetlabs-release-el-${rhelVersion}.noarch.rpm"
 }
 
-package { 'epel-release':
-  provider        => rpm,
-  ensure          => installed,
-  install_options => ['--nodeps'],
-  source          => "http://download.fedoraproject.org/pub/epel/${rhelVersion}/x86_64/epel-release-${epelVersion}.noarch.rpm"
-}
-
 package { ['git', 'puppet']:
   ensure => installed
 }
 
-exec { 'install_vcsrepo_puppet_module':
+exec { 'exec.install_vcsrepo_puppet_module':
   command => "puppet module install puppetlabs-vcsrepo",
   require => Package['puppet']
 }
@@ -33,7 +25,7 @@ vcsrepo { '/opt/unicore/puppet-manifests':
   provider => git,
   source   => 'https://github.com/unicore-life/puppet-manifests.git',
   revision => 'master',
-  require  => Exec['install_vcsrepo_puppet_module']
+  require  => Exec['exec.install_vcsrepo_puppet_module']
 }
 
 cron { 'puppet-apply':
