@@ -16,7 +16,7 @@ package { ['git', 'puppet']:
 }
 
 exec { 'exec.install_vcsrepo_puppet_module':
-  command => "puppet module install puppetlabs-vcsrepo",
+  command => 'puppet module install puppetlabs-vcsrepo',
   require => Package['puppet']
 }
 

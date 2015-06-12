@@ -14,3 +14,9 @@ exec { 'exec.fqdn-symbolic-link':
   command => "sh -c 'if [ -d ${_fqdnDirectory} ]; then ln -s ${_fqdnDirectory} ${_fqdnSymbolicLink}; else rm -f ${_fqdnSymbolicLink}; fi'"
 }
 
+
+exec { 'exec.install_mysql_puppet_module':
+  command => 'puppet module install puppetlabs-mysql',
+  require => Package['puppet']
+}
+
