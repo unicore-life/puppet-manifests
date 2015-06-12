@@ -1,4 +1,4 @@
-$packageList = [ 'yum', 'git', 'subversion', 'puppet' ]
+$packageList = ['bash', 'expect', 'git', 'perl', 'puppet', 'python', 'subversion']
 
 package { 
   $packageList: 
