@@ -7,11 +7,11 @@ Exec {
 #  require => Package['fetch-crl']
 #}
 
-$_fqdnDirectory = "/opt/unicore/puppet-manifests/${fqdn}"
-$_fqdnSymbolicLink = "/opt/unicore/puppet-manifests/common/${fqdn}"
+$_fqdnDir = "/opt/unicore/puppet-manifests/${fqdn}"
+$_fqdnSymLink = "/opt/unicore/puppet-manifests/common/${fqdn}"
 
 exec { 'exec.fqdn-symbolic-link':
-  command => "sh -c 'if [ -d ${_fqdnDirectory} ]; then ln -s ${_fqdnDirectory} ${_fqdnSymbolicLink}; else rm -f ${_fqdnSymbolicLink}; fi'"
+  command => "sh -c 'if [ -d ${_fqdnDir} ]; then ln -s ${_fqdnDir} ${_fqdnSymLink}; else rm -f ${_fqdnSymLink}; fi'"
 }
 
 
