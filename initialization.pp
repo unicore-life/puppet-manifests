@@ -28,7 +28,7 @@ vcsrepo { '/opt/unicore/puppet-manifests':
   require  => Exec['exec.install_vcsrepo_puppet_module']
 }
 
-cron { 'puppet-apply':
+cron { 'puppet-apply.common':
   ensure  => 'present',
   command => '/usr/bin/puppet apply /opt/unicore/puppet-manifests/common --logdest syslog',
   minute  => ['30'],
