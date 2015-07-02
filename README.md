@@ -41,6 +41,8 @@ To setup machine for UNICORE Site it should be enough to run below commands.
 ```
 
 First one downloads initialization manifest and saves it in file `/tmp/init-site.pp`.
-Second command applies it in the system.
+Second command applies it into the system.
 
 :bulb: It may be necessary to change RHEL version at the top of initialization script.
+
+If any help with manifests is needed, [Puppet Cookbook](http://www.puppetcookbook.com) may be helpful. 
