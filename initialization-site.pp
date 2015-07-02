@@ -1,7 +1,7 @@
 $rhelVersion = '6'
 
-Exec { 
-    path => [ '/bin/', '/usr/bin/' ] 
+Exec {
+  path => [ '/bin/', '/usr/bin/' ]
 }
 
 package { 'puppetlabs-release':
@@ -28,11 +28,10 @@ vcsrepo { '/opt/unicore/puppet-manifests':
   require  => Exec['exec.install_vcsrepo_puppet_module']
 }
 
-cron { 'puppet-apply.common':
+cron { 'puppet-apply.plgrid-site':
   ensure  => 'present',
-  command => '/usr/bin/puppet apply /opt/unicore/puppet-manifests/common --logdest syslog',
+  command => '/usr/bin/puppet apply /opt/unicore/puppet-manifests/plgrid-site --logdest syslog',
   minute  => ['30'],
   target  => 'root',
   user    => 'root',
 }
-

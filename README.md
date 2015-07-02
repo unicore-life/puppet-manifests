@@ -1,5 +1,6 @@
 # puppet-manifests
 
+Repository contains [Puppet](https://puppetlabs.com) manifests for managing [UNICORE](http://unicore.eu) services.
 
 ## Installation of Puppet
 
@@ -31,7 +32,7 @@ Full *puppet* installation documentation can be found
 [here](http://docs.puppetlabs.com/guides/install_puppet/install_el.html).
 
 
-## UNICORE Site System Configuration Setup
+## UNICORE Site Configuration
 
 To setup machine for UNICORE Site it should be enough to run below commands.
 ```bash

@@ -1,5 +1,5 @@
 package { ['unicore-gateway', 'unicore-unicorex', 'unicore-uftpd']:
-  ensure => installed,
+  ensure  => installed,
   require => Package['plgrid-repos']
 }
 

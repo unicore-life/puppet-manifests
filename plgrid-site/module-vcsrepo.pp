@@ -1,4 +1,3 @@
-
 vcsrepo { '/opt/unicore/puppet-manifests':
   ensure   => latest,
   provider => git,
@@ -11,4 +10,3 @@ vcsrepo { '/opt/unicore/plgrid-idb-templates':
   provider => svn,
   source   => 'svn://svn.code.sf.net/p/unicore-life/code/plg-utils/plg-idb-templates/trunk/'
 }
-

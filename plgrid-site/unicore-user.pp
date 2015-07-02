@@ -11,7 +11,7 @@ user { 'unicore':
   forcelocal => true,
   require    => Group['unicore']
 }
- 
+
 group { 'unicore':
   ensure  => 'present',
   gid     => "${unicoreId}"
