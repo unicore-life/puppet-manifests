@@ -24,4 +24,3 @@ file { '/usr/share/unicore':
   mode    => 0755,
   require => [ User['unicore'], Group['unicore'] ]
 }
-

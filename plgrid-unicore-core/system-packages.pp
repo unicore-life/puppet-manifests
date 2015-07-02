@@ -1,4 +1,4 @@
-$installedPackagesList = ['bash', 'expect', 'git', 'perl', 'puppet', 'python', 'subversion']
+$installedPackagesList = ['bash', 'expect', 'git', 'perl', 'python', 'subversion']
 $latestPackagesList = ['java-1.7.0-openjdk', 'java-1.8.0-openjdk']
 
 package { $installedPackagesList:
