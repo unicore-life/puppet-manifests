@@ -20,12 +20,9 @@ exec { 'exec.install_vcsrepo_puppet_module':
   require => Package['puppet']
 }
 
-vcsrepo { '/opt/unicore/puppet-manifests':
-  ensure   => latest,
-  provider => git,
-  source   => 'https://github.com/unicore-life/puppet-manifests.git',
-  revision => 'master',
-  require  => Exec['exec.install_vcsrepo_puppet_module']
+exec { 'exec.install_mysql_puppet_module':
+  command => 'puppet module install puppetlabs-mysql',
+  require => Package['puppet']
 }
 
 cron { 'puppet-apply.plgrid-site':
