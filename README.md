@@ -22,10 +22,11 @@ It is necessary to install *puppetlabs-release* package first.
 	# rpm -ivh http://yum.puppetlabs.com/puppetlabs-release-el-5.noarch.rpm
 	```
 	
-Next, it should be just enough to install *puppet* package 
+Next, it should be just enough to install *puppet* package and puppet module *vcsrepo*
 (note, that it may be necessary to install also *yum* system package if missing).
 ```bash
 # yum install puppet
+# puppet module install puppetlabs-vcsrepo
 ```
 
 Full *puppet* installation documentation can be found 
