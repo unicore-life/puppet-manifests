@@ -1,8 +1,6 @@
 $rhelVersion = '6'
 
-Exec {
-  path => [ '/bin/', '/usr/bin/' ]
-}
+Exec { path => [ '/bin/', '/usr/bin/' ] }
 
 package { 'puppetlabs-release':
   provider        => rpm,
@@ -11,8 +9,11 @@ package { 'puppetlabs-release':
   source          => "http://yum.puppetlabs.com/puppetlabs-release-el-${rhelVersion}.noarch.rpm"
 }
 
-package { ['git', 'puppet']:
-  ensure => installed
+package { ['git', 'puppet']: ensure => installed }
+
+exec { 'exec.install_mysql_puppet_module':
+  command => 'puppet module install puppetlabs-mysql',
+  require => Package['puppet']
 }
 
 exec { 'exec.install_vcsrepo_puppet_module':
@@ -20,9 +21,12 @@ exec { 'exec.install_vcsrepo_puppet_module':
   require => Package['puppet']
 }
 
-exec { 'exec.install_mysql_puppet_module':
-  command => 'puppet module install puppetlabs-mysql',
-  require => Package['puppet']
+vcsrepo { '/opt/unicore/puppet-manifests':
+  ensure   => latest,
+  provider => git,
+  source   => 'https://github.com/unicore-life/puppet-manifests.git',
+  revision => 'master',
+  require  => Exec['exec.install_vcsrepo_puppet_module']
 }
 
 cron { 'puppet-apply.plgrid-site':
