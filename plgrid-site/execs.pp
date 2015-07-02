@@ -1,4 +1,4 @@
-# Setup path for all exec resources:
+# Setup path for all Exec resources:
 #
 Exec {
   path => [ '/bin', '/sbin', '/usr/bin', '/usr/sbin' ]
