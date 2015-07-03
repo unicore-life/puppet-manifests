@@ -33,9 +33,9 @@ Stage['main'] -> Stage['finale']
 
 # Assign classes to stages:
 #
-class { 'yumrepos':
-  stage => 'system',
-}->
-class { 'package':
-  stage => 'system',
-}
+#class { 'yumrepos':
+#  stage => 'system',
+#}->
+#class { 'packages':
+#  stage => 'system',
+#}

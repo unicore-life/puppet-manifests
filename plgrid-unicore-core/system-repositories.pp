@@ -24,4 +24,3 @@ yumrepo { 'eugridpma':
   gpgkey   => 'https://dist.eugridpma.info/distribution/igtf/current/GPG-KEY-EUGridPMA-RPM-3',
   name     => 'eugridpma'
 }
-
