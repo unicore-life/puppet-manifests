@@ -1,5 +1,5 @@
-class system::packages {
-  $installedPackagesList = ['bash', 'expect', 'git', 'perl', 'python', 'subversion']
+class grid-site::packages {
+  $installedPackagesList = ['bash', 'expect', 'perl', 'puppet', 'python']
   $latestPackagesList = ['java-1.7.0-openjdk', 'java-1.8.0-openjdk']
 
   package { $installedPackagesList:

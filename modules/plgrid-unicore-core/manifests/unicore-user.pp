@@ -1,4 +1,4 @@
-class unicore::user {
+class plgrid-unicore-core::unicore-user {
   $unicoreId = '490'
 
   user { 'unicore':

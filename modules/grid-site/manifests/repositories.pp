@@ -1,4 +1,4 @@
-class system::repositories {
+class grid-site::repositories {
   $rhelVersion = '6'
   $epelVersion = '6-8'
 
@@ -7,13 +7,6 @@ class system::repositories {
     ensure          => installed,
     install_options => ['--nodeps'],
     source          => "http://download.fedoraproject.org/pub/epel/${rhelVersion}/x86_64/epel-release-${epelVersion}.noarch.rpm"
-  }
-
-  package { 'plgrid-repos':
-    provider        => rpm,
-    ensure          => installed,
-    install_options => ['--nodeps'],
-    source          => 'http://software.plgrid.pl/packages/repos/plgrid-repos-2010-2.noarch.rpm'
   }
 
   yumrepo { 'eugridpma':
