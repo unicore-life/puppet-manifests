@@ -25,7 +25,7 @@ It is necessary to install *puppetlabs-release* package first.
 Next, it should be just enough to install *puppet* package and puppet module *vcsrepo*
 (note, that it may be necessary to install also *yum* system package if missing).
 ```bash
-# yum install puppet
+# yum -y install puppet
 # puppet module install puppetlabs-vcsrepo
 ```
 
@@ -37,7 +37,7 @@ Full *puppet* installation documentation can be found
 
 To setup machine for UNICORE Site it should be enough to run below commands.
 ```bash
-# wget --no-check-certificate -O /tmp/init-site.pp https://raw.githubusercontent.com/unicore-life/puppet-manifests/master/initialization-site.pp
+# wget --no-check-certificate -O /tmp/init-site.pp https://raw.githubusercontent.com/unicore-life/puppet-manifests/master/manifests/initialization-site.pp
 # puppet apply /tmp/init-site.pp 
 ```
 
