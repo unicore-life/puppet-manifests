@@ -46,4 +46,7 @@ Second command applies it into the system.
 
 :bulb: It may be necessary to change RHEL version at the top of initialization script.
 
-If any help with manifests is needed, [Puppet Cookbook](http://www.puppetcookbook.com) may be helpful. 
+## Useful Links
+
+- [Puppet Cookbook](http://www.puppetcookbook.com)
+- [Puppet Style Guide](http://docs.puppetlabs.com/guides/style_guide.html)
