@@ -11,17 +11,22 @@ package { 'puppetlabs-release':
 
 package { ['git', 'puppet']: ensure => installed }
 
-exec { 'exec.install_mysql_puppet_module':
+exec { 'exec.install_module_puppetlabs-ntp':
+  command => 'puppet module install puppetlabs-ntp',
+  require => Package['puppet']
+}
+
+exec { 'exec.install_module_puppetlabs-mysql':
   command => 'puppet module install puppetlabs-mysql',
   require => Package['puppet']
 }
 
-exec { 'exec.install_vcsrepo_puppet_module':
+exec { 'exec.install_module_puppetlabs-vcsrepo':
   command => 'puppet module install puppetlabs-vcsrepo',
   require => Package['puppet']
 }
 
-vcsrepo { '/opt/unicore/puppet-manifests':
+vcsrepo { '/opt/plgrid/puppet-manifests':
   ensure   => latest,
   provider => git,
   source   => 'https://github.com/unicore-life/puppet-manifests.git',

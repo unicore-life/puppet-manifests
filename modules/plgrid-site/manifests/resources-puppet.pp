@@ -1,5 +1,5 @@
 class plgrid-unicore-core::resources-puppet {
-  vcsrepo { '/opt/unicore/puppet-manifests':
+  vcsrepo { '/opt/plgrid/puppet-manifests':
     ensure   => latest,
     provider => git,
     source   => 'https://github.com/unicore-life/puppet-manifests.git',

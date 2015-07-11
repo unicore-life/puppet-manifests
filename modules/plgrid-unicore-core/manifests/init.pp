@@ -1,19 +1,4 @@
-class plgrid-unicore-core inherits grid-site {
+class plgrid-unicore-core inherits plgrid-site {
   contain plgrid-unicore-core::resources-defaults
-
-  package { ['git', 'subversion']: ensure => installed }
-
-  package { 'plgrid-repos':
-    provider        => rpm,
-    ensure          => installed,
-    install_options => ['--nodeps'],
-    source          => 'http://software.plgrid.pl/packages/repos/plgrid-repos-2010-2.noarch.rpm'
-  }
-
-  package { 'ca_PLGRID-SimpleCA':
-    ensure  => latest,
-    require => Package['plgrid-repos']
-  }
-
   contain plgrid-unicore-core::unicore-user
 }

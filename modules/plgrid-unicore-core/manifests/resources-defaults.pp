@@ -1,11 +1,5 @@
 class plgrid-unicore-core::resources-defaults {
 
-# Setup path for all Exec resources:
-#
-  Exec {
-    path => [ '/bin', '/sbin', '/usr/bin', '/usr/sbin' ]
-  }
-
 # Setup path for all File resources:
 #
   File {

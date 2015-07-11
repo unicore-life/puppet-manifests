@@ -26,7 +26,7 @@ Next, it should be just enough to install *puppet* package and puppet module *vc
 (note, that it may be necessary to install also *yum* system package if missing).
 ```bash
 # yum -y install puppet
-# puppet module install puppetlabs-vcsrepo
+# puppet module install puppetlabs-vcsrepo 
 ```
 
 Full *puppet* installation documentation can be found 
