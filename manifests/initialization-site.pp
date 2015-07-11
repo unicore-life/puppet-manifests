@@ -31,7 +31,7 @@ vcsrepo { '/opt/plgrid/puppet-manifests':
   provider => git,
   source   => 'https://github.com/unicore-life/puppet-manifests.git',
   revision => 'master',
-  require  => Exec['exec.install_vcsrepo_puppet_module']
+  require  => Exec['exec.install_module_puppetlabs-vcsrepo']
 }
 
 #cron { 'puppet-apply.plgrid-unicore-site':
