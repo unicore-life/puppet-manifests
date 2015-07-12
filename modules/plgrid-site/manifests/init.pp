@@ -1,7 +1,7 @@
 class plgrid-unicore-core inherits grid-site {
   contain plgrid-site::resources-defaults
 
-  package { ['git', 'subversion']: ensure => installed }
+  package { ['git', 'subversion', 'vim']: ensure => latest }
 
   package { 'plgrid-repos':
     provider        => rpm,
