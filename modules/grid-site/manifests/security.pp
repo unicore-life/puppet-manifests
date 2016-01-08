@@ -15,6 +15,12 @@ class grid-site::security {
     require => Package['fetch-crl']
   }
 
+  service { 'fetch-crl-boot':
+    ensure  => running,
+    enable  => true,
+    require => Package['fetch-crl']
+  }
+
 #exec { 'exec.fetch-crl':
 #  command => '/usr/sbin/fetch-crl -v',
 #  require => Package['fetch-crl']
