@@ -1,4 +1,4 @@
-class plgrid-unicore-core inherits plgrid-site {
+class plgrid-oxides-protal inherits plgrid-site {
 
   package { ['haproxy', 'htop']: ensure => latest }
 }

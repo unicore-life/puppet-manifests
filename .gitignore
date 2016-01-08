@@ -2,8 +2,3 @@
 #
 .idea/
 *.iml
-
-# Links used for inclusion:
-#
-plgrid-unicore-site/include-core
-plgrid-unicore-central/include-core

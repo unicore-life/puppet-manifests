@@ -1,4 +1,4 @@
-class plgrid-unicore-core inherits grid-site {
+class plgrid-site inherits grid-site {
   contain plgrid-site::resources-defaults
 
   package { ['git', 'subversion', 'vim']: ensure => latest }
