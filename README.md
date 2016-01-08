@@ -38,7 +38,8 @@ Full *puppet* installation documentation can be found
 To setup machine for UNICORE Site it should be enough to run below commands.
 ```bash
 # wget --no-check-certificate -O /tmp/init-site.pp https://raw.githubusercontent.com/unicore-life/puppet-manifests/master/manifests/initialization-site.pp
-# puppet apply /tmp/init-site.pp 
+TODO: change wget -> curl
+# puppet apply /tmp/init-site.pp
 ```
 
 First one downloads initialization manifest and saves it in file `/tmp/init-site.pp`.
